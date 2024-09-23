@@ -1,6 +1,4 @@
-# Josephus Problem with Recursion
-
-## 1. Description of the Josephus Problem
+## What's the Josephus Problem?
 The **Josephus Problem** is a famous puzzle that comes up in math and computer science. Imagine a group of people standing in a circle, and every `k`th person is eliminated until only one remains. The challenge is to figure out where to stand to be the last person left.
 
 The story behind the problem dates back to the **Jewish-Roman War**, where a group of soldiers used a similar method to avoid being captured. It’s a quirky, old problem that still teaches us a lot about **modular arithmetic** and how to break complex problems into smaller chunks.
@@ -13,9 +11,6 @@ Think of recursion like peeling an onion—each layer you peel brings you closer
 ---
 
 ## 2. Python-Based Solution
-
-Here’s a Python solution to solve the Josephus Problem using recursion:
-
 ```python
 def josephus(n, k):
     """
@@ -43,6 +38,7 @@ last_person = josephus(n, k) + 1
 
 # Output the result
 print(f"The position of the last remaining person is: {last_person}")
+
 ```
 
 ---
@@ -53,7 +49,7 @@ print(f"The position of the last remaining person is: {last_person}")
 The smallest group is when only 1 person remains. In this case, that person is naturally the last one left. So if `n == 1`, we return position `0`. This is the core of our recursive function.
 
 ### Step 2: Recursive Step
-When there are more than one person (`n > 1`), we call the function again with `n-1` people and adjust the result using the skip number `k`. This part is key. The position in the reduced group needs to be adjusted to reflect the elimination order in the original group. This adjustment is done using the formula:
+When there is more than one person (`n > 1`), we call the function again with `n-1` people and adjust the result using the skip number `k`. This part is key. The position in the reduced group needs to be adjusted to reflect the elimination order in the original group. This adjustment is done using the formula:
 
 ```
 (josephus(n-1, k) + k) % n
@@ -87,18 +83,6 @@ The position of the last remaining person is: 3
 - **Skip number**: Every 2nd person is eliminated.
 - **Elimination order**: The people are eliminated in this order: 2, 4, 1, 5.
 - **Last person remaining**: Person 3 is the last one left standing.
-
-### Another Sample (666 People and Skip Number 6):
-```
-Enter the number of people: 666
-Enter the skip number: 6
-```
-#### Output:
-```
-The position of the last remaining person is: 26
-```
-#### Processing:
-With a large group of 666 people and skipping every 6th person, the same recursive process unfolds, and the last survivor stands at position 26.
 
 ---
 
