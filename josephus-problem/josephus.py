@@ -3,7 +3,7 @@ def josephus(n, k):
     Function to simulate the Josephus problem with step-by-step elimination.
 
     Parameters:
-    n: Total number of people in the circle.
+    n: Total number of people in the circle
     k: Number of people to skip before eliminating one.
 
     Returns:
