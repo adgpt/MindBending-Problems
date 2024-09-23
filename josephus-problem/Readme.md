@@ -12,8 +12,6 @@ Think of recursion like peeling an onion—each layer you peel brings you closer
 
 ## 2. Python-Based Solution
 ```python
-# Josephus Problem Solution in Python
-
 def josephus(n, k):
     """
     Recursive function to find the position of the last remaining person.
