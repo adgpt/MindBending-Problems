@@ -32,7 +32,7 @@ The **Vigenère Cipher** is a method of encrypting alphabetic text using a simpl
 - Python 3.x installed
 ---
 
-### Sample Input and Output
+### Sample Input and Output:
 Encrypt:
 ```
 Do you want to (E)ncrypt or (D)ecrypt? E
